@@ -1,0 +1,59 @@
+diff --git a/node_modules/react-native-vlc-media-player/VLCPlayer.js b/node_modules/react-native-vlc-media-player/VLCPlayer.js
+index 9b91442..61efe46 100755
+--- a/node_modules/react-native-vlc-media-player/VLCPlayer.js
++++ b/node_modules/react-native-vlc-media-player/VLCPlayer.js
+@@ -162,7 +162,7 @@ export default class VLCPlayer extends Component {
+   }
+ 
+   _onSnapshot(event) {
+-    if (event.nativeEvent.success && this.props.onSnapshot) {
++    if (this.props.onSnapshot) {
+       this.props.onSnapshot(event.nativeEvent);
+     }
+   }
+diff --git a/node_modules/react-native-vlc-media-player/ios/RCTVLCPlayer/RCTVLCPlayer.m b/node_modules/react-native-vlc-media-player/ios/RCTVLCPlayer/RCTVLCPlayer.m
+index 54e29ee..0937998 100755
+--- a/node_modules/react-native-vlc-media-player/ios/RCTVLCPlayer/RCTVLCPlayer.m
++++ b/node_modules/react-native-vlc-media-player/ios/RCTVLCPlayer/RCTVLCPlayer.m
+@@ -399,22 +399,30 @@ static NSString *const playbackRate = @"rate";
+     @try {
+         if (_player) {
+             [_player saveVideoSnapshotAt:path withWidth:_player.videoSize.width andHeight:_player.videoSize.height];
+-            self.onSnapshot(@{
+-                @"success": @YES,
+-                @"path": path,
+-                @"error": [NSNull null],
+-                @"target": self.reactTag
+-            });
++            if (self.onSnapshot) {
++                self.onSnapshot(@{
++                    @"success": @YES,
++                    @"path": path ?: @"",
++                    @"error": [NSNull null],
++                    @"target": self.reactTag ?: @""
++                });
++            } else {
++                NSLog(@"[RCTVLCPlayer] onSnapshot callback is nil — cannot send success event");
++            }
+         } else {
+             @throw [NSException exceptionWithName:@"PlayerNotInitialized" reason:@"Player is not initialized" userInfo:nil];
+         }
+     } @catch (NSException *e) {
+         NSLog(@"Error in snapshot: %@", e);
+-        self.onSnapshot(@{
+-            @"success": @NO,
+-            @"error": [e description],
+-            @"target": self.reactTag
+-        });
++        if (self.onSnapshot) {
++            self.onSnapshot(@{
++                @"success": @NO,
++                @"error": [e description] ?: @"Unknown error",
++                @"target": self.reactTag ?: @""
++            });
++        } else {
++            NSLog(@"[RCTVLCPlayer] onSnapshot callback is nil — cannot send error event");
++        }
+     }
+ }
+ 
