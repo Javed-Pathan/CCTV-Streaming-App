@@ -123,7 +123,39 @@ export async function saveSnapshot(
 export async function getSnapshots(): Promise<Snapshot[]> {
     try {
         const jsonValue = await AsyncStorage.getItem(SNAPSHOTS_STORAGE_KEY);
-        return jsonValue != null ? JSON.parse(jsonValue) : [];
+        const storedSnapshots: Snapshot[] = jsonValue != null ? JSON.parse(jsonValue) : [];
+
+        const currentDocDir = FileSystem.documentDirectory;
+        if (!currentDocDir) return storedSnapshots;
+
+        // Fix URIs and ensure dates exist
+        return storedSnapshots.map(snapshot => {
+            let updatedUri = snapshot.imageUri;
+
+            // If it's a file URI, rebuild it using the current document directory
+            // This fixes visibility issues when the app container ID changes on iOS
+            if (updatedUri.includes('/Documents/snapshots/')) {
+                const fileName = updatedUri.split('/').pop();
+                updatedUri = `${currentDocDir}snapshots/${fileName}`;
+            }
+
+            // Ensure date property exists for grouping (use timestamp as fallback)
+            let updatedDate = snapshot.date;
+            if (!updatedDate) {
+                try {
+                    // Try to parse timestamp (e.g., "MM/DD/YYYY, HH:MM:SS AM/PM")
+                    updatedDate = new Date(snapshot.timestamp).toISOString();
+                } catch (e) {
+                    updatedDate = new Date().toISOString();
+                }
+            }
+
+            return {
+                ...snapshot,
+                imageUri: updatedUri,
+                date: updatedDate
+            };
+        });
     } catch (error) {
         console.error('Error getting snapshots:', error);
         return [];
@@ -147,6 +179,28 @@ export async function deleteSnapshot(id: string): Promise<void> {
     } catch (error) {
         console.error('Error deleting snapshot:', error);
         throw new Error('Failed to delete snapshot');
+    }
+}
+
+export async function deleteSnapshots(ids: string[]): Promise<void> {
+    try {
+        const snapshots = await getSnapshots();
+        const updatedSnapshots = snapshots.filter(s => {
+            if (ids.includes(s.id)) {
+                // Delete file asynchronously (don't wait for each one to finish if there are many)
+                // but we filter the metadata immediately
+                FileSystem.deleteAsync(s.imageUri).catch(err =>
+                    console.error(`[Snapshot] Failed to delete file ${s.imageUri}:`, err)
+                );
+                return false;
+            }
+            return true;
+        });
+
+        await AsyncStorage.setItem(SNAPSHOTS_STORAGE_KEY, JSON.stringify(updatedSnapshots));
+    } catch (error) {
+        console.error('Error deleting snapshots:', error);
+        throw new Error('Failed to delete snapshots');
     }
 }
 

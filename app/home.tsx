@@ -112,7 +112,7 @@ export default function HomeScreen() {
           className="bg-blue-500 rounded-xl p-4 mt-3 flex-row items-center justify-center gap-2"
         >
           <Video size={20} color="white" />
-          <Text className="text-white font-bold text-base">Test Demo Camera Stream</Text>
+          <Text className="text-white font-bold text-base">Test Camera Stream</Text>
         </TouchableOpacity>
       </View>
 

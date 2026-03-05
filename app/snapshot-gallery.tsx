@@ -1,9 +1,9 @@
-import { clearAllSnapshots, deleteSnapshot, getSnapshots } from '@/lib/snapshot';
+import { clearAllSnapshots, deleteSnapshot, getSnapshots, deleteSnapshots } from '@/lib/snapshot';
 import { Snapshot } from '@/types/camera';
 import { useFocusEffect, useRouter } from 'expo-router';
 import React, { useCallback, useState } from 'react';
 import { Alert, Dimensions, Image, Modal, ScrollView, Text, TouchableOpacity, View, SafeAreaView } from 'react-native';
-import { ArrowLeft, Trash2, Camera, Calendar, Clock, X, Share2, MapPin } from 'lucide-react-native';
+import { ArrowLeft, Trash2, Camera, Calendar, Clock, X, Share2, MapPin, CheckCircle2, Circle } from 'lucide-react-native';
 import { ThemeToggle } from '@/components/ThemeToggle';
 
 const { width } = Dimensions.get('window');
@@ -14,6 +14,8 @@ export default function SnapshotGalleryScreen() {
   const [snapshots, setSnapshots] = useState<Snapshot[]>([]);
   const [selectedSnapshot, setSelectedSnapshot] = useState<Snapshot | null>(null);
   const [modalVisible, setModalVisible] = useState(false);
+  const [isSelectionMode, setIsSelectionMode] = useState(false);
+  const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
 
   // Load snapshots when screen comes into focus
   useFocusEffect(
@@ -79,11 +81,76 @@ export default function SnapshotGalleryScreen() {
   };
 
   const openPreview = (snapshot: Snapshot) => {
+    if (isSelectionMode) {
+      toggleSelection(snapshot.id);
+      return;
+    }
     setSelectedSnapshot(snapshot);
     setModalVisible(true);
   };
 
+  const toggleSelection = (id: string) => {
+    setSelectedIds(prev => {
+      const next = new Set(prev);
+      if (next.has(id)) {
+        next.delete(id);
+      } else {
+        next.add(id);
+      }
+      return next;
+    });
+  };
+
+  const enterSelectionMode = () => {
+    setIsSelectionMode(true);
+    setSelectedIds(new Set());
+  };
+
+  const exitSelectionMode = () => {
+    setIsSelectionMode(false);
+    setSelectedIds(new Set());
+  };
+
+  const handleSelectAll = () => {
+    if (selectedIds.size === snapshots.length) {
+      setSelectedIds(new Set());
+    } else {
+      setSelectedIds(new Set(snapshots.map(s => s.id)));
+    }
+  };
+
+  const handleDeleteSelected = () => {
+    if (selectedIds.size === 0) return;
+
+    Alert.alert(
+      'Delete Snapshots',
+      `Are you sure you want to delete ${selectedIds.size} selected snapshot${selectedIds.size > 1 ? 's' : ''}?`,
+      [
+        { text: 'Cancel', style: 'cancel' },
+        {
+          text: 'Delete',
+          style: 'destructive',
+          onPress: async () => {
+            try {
+              await deleteSnapshots(Array.from(selectedIds));
+              await loadSnapshots();
+              exitSelectionMode();
+              Alert.alert('Success', 'Selected snapshots deleted');
+            } catch (error) {
+              Alert.alert('Error', 'Failed to delete snapshots');
+            }
+          },
+        },
+      ]
+    );
+  };
+
   const formatDate = (date: Date) => {
+    // Handle invalid dates
+    if (isNaN(date.getTime())) {
+      return 'Unknown Date';
+    }
+
     const today = new Date();
     const yesterday = new Date(today);
     yesterday.setDate(yesterday.getDate() - 1);
@@ -112,21 +179,41 @@ export default function SnapshotGalleryScreen() {
       {/* Header */}
       <View className="flex-row items-center justify-between px-6 py-4 border-b border-border">
         <View className="flex-row items-center gap-3">
-          <TouchableOpacity onPress={() => router.back()}>
+          <TouchableOpacity onPress={() => isSelectionMode ? exitSelectionMode() : router.back()}>
             <ArrowLeft className="text-foreground" size={24} />
           </TouchableOpacity>
           <View>
-            <Text className="text-xl font-bold text-foreground">Snapshot Gallery</Text>
+            <Text className="text-xl font-bold text-foreground">
+              {isSelectionMode ? `${selectedIds.size} Selected` : 'Snapshot Gallery'}
+            </Text>
             <Text className="text-sm text-muted-foreground">{snapshots.length} snapshots</Text>
           </View>
         </View>
         <View className="flex-row items-center gap-3">
           {snapshots.length > 0 && (
-            <TouchableOpacity onPress={handleDeleteAll}>
-              <Trash2 className="text-destructive" size={22} />
-            </TouchableOpacity>
+            <>
+              {isSelectionMode ? (
+                <View className="flex-row items-center gap-4">
+                  <TouchableOpacity onPress={handleSelectAll}>
+                    <Text className="text-primary font-semibold">
+                      {selectedIds.size === snapshots.length ? 'None' : 'All'}
+                    </Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity onPress={handleDeleteSelected} disabled={selectedIds.size === 0}>
+                    <Trash2 className={selectedIds.size > 0 ? "text-destructive" : "text-muted-foreground"} size={22} />
+                  </TouchableOpacity>
+                  <TouchableOpacity onPress={exitSelectionMode}>
+                    <Text className="text-primary font-semibold">Cancel</Text>
+                  </TouchableOpacity>
+                </View>
+              ) : (
+                <TouchableOpacity onPress={enterSelectionMode}>
+                  <Text className="text-primary font-semibold">Select</Text>
+                </TouchableOpacity>
+              )}
+            </>
           )}
-          <ThemeToggle />
+          {!isSelectionMode && <ThemeToggle />}
         </View>
       </View>
 
@@ -174,21 +261,43 @@ export default function SnapshotGalleryScreen() {
                       resizeMode="cover"
                     />
 
+                    {/* Selection Indicator */}
+                    {isSelectionMode && (
+                      <View className="absolute top-2 right-2 z-10 shadow-2xl">
+                        {selectedIds.has(snapshot.id) ? (
+                          <View className="bg-primary rounded-full p-0.5 border-2 border-white shadow-lg">
+                            <CheckCircle2 color="white" size={20} fill="rgba(255,255,255,0.2)" />
+                          </View>
+                        ) : (
+                          <View className="bg-black/50 rounded-full p-0.5 border-2 border-white/80 shadow-md">
+                            <Circle color="white" size={20} />
+                          </View>
+                        )}
+                      </View>
+                    )}
+
                     {/* Overlay Info */}
-                    <View className="absolute bottom-0 left-0 right-0 bg-black/70 p-2">
-                      <View className="flex-row items-center gap-1 mb-1">
-                        <Camera className="text-white" size={12} />
-                        <Text className="text-white text-xs font-semibold" numberOfLines={1}>
-                          {snapshot.cameraName}
-                        </Text>
+                    {!isSelectionMode && (
+                      <View className="absolute bottom-0 left-0 right-0 bg-black/70 p-2">
+                        <View className="flex-row items-center gap-1 mb-1">
+                          <Camera className="text-white" size={12} />
+                          <Text className="text-white text-xs font-semibold" numberOfLines={1}>
+                            {snapshot.cameraName}
+                          </Text>
+                        </View>
+                        <View className="flex-row items-center gap-1">
+                          <Clock className="text-white/80" size={10} />
+                          <Text className="text-white/80 text-[10px]">
+                            {snapshot.timestamp.split(' ')[1]}
+                          </Text>
+                        </View>
                       </View>
-                      <View className="flex-row items-center gap-1">
-                        <Clock className="text-white/80" size={10} />
-                        <Text className="text-white/80 text-[10px]">
-                          {snapshot.timestamp.split(' ')[1]}
-                        </Text>
-                      </View>
-                    </View>
+                    )}
+
+                    {/* Selected Overlay */}
+                    {isSelectionMode && selectedIds.has(snapshot.id) && (
+                      <View className="absolute inset-0 bg-primary/20 border-2 border-primary rounded-xl" />
+                    )}
                   </TouchableOpacity>
                 ))}
               </View>

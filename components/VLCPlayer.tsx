@@ -15,6 +15,7 @@ interface VLCPlayerProps {
     onStateChange?: (state: StreamState) => void;
     onSnapshot?: (event: { success: boolean; path?: string; error?: string }) => void;
     style?: any;
+    videoAspectRatio?: string;
 }
 
 export interface VLCPlayerMethods {
@@ -40,7 +41,7 @@ const createSource = (url: string) => {
 };
 
 export const VLCPlayer = forwardRef<VLCPlayerMethods, VLCPlayerProps>(
-    ({ url, onStateChange, onSnapshot, style }, ref) => {
+    ({ url, onStateChange, onSnapshot, style, videoAspectRatio }, ref) => {
         const playerRef = useRef<any>(null);
         const [state, setState] = useState<StreamState>('loading');
         const [source, setSource] = useState(() => createSource(url));
@@ -85,7 +86,8 @@ export const VLCPlayer = forwardRef<VLCPlayerMethods, VLCPlayerProps>(
                     style={styles.video}
                     source={source}
                     autoplay={true}
-                    autoAspectRatio={true}
+                    autoAspectRatio={false}
+                    videoAspectRatio={videoAspectRatio || '16:9'}
                     resizeMode="contain"
                     onBuffering={() => updateState('buffering')}
                     onPlaying={() => updateState('playing')}
