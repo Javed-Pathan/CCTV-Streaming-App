@@ -16,8 +16,8 @@ export default function AddCameraScreen() {
     name: 'Cam 1',
     ip: '192.168.1.26',
     port: '554',
-    username: 'demo',
-    password: 'Demo@123',
+    username: 'James Walker',
+    password: 'James@123',
     protocol: 'RTSP',
     location: 'Outdoor',
   });

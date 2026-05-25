@@ -1,0 +1,548 @@
+› Building app...
+Configuration on demand is an incubating feature.
+> Task :expo-gradle-plugin:expo-autolinking-plugin-shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :gradle-plugin:settings-plugin:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :expo-gradle-plugin:expo-autolinking-settings-plugin:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :gradle-plugin:shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :gradle-plugin:settings-plugin:pluginDescriptors UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-settings-plugin:pluginDescriptors UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-settings-plugin:processResources UP-TO-DATE
+> Task :gradle-plugin:settings-plugin:processResources UP-TO-DATE
+> Task :gradle-plugin:shared:compileKotlin UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-plugin-shared:compileKotlin UP-TO-DATE
+> Task :gradle-plugin:shared:compileJava NO-SOURCE
+> Task :expo-gradle-plugin:expo-autolinking-plugin-shared:compileJava NO-SOURCE
+> Task :gradle-plugin:shared:processResources NO-SOURCE
+> Task :gradle-plugin:shared:classes UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-plugin-shared:processResources NO-SOURCE
+> Task :gradle-plugin:shared:jar UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-plugin-shared:classes UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-plugin-shared:jar UP-TO-DATE
+> Task :gradle-plugin:settings-plugin:compileKotlin UP-TO-DATE
+> Task :gradle-plugin:settings-plugin:compileJava NO-SOURCE
+> Task :gradle-plugin:settings-plugin:classes UP-TO-DATE
+> Task :gradle-plugin:settings-plugin:jar UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-settings-plugin:compileKotlin UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-settings-plugin:compileJava NO-SOURCE
+> Task :expo-gradle-plugin:expo-autolinking-settings-plugin:classes UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-settings-plugin:jar UP-TO-DATE
+> Task :gradle-plugin:react-native-gradle-plugin:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :expo-gradle-plugin:expo-autolinking-plugin:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :expo-module-gradle-plugin:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :expo-module-gradle-plugin:pluginDescriptors UP-TO-DATE
+> Task :expo-module-gradle-plugin:processResources UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-plugin:compileKotlin UP-TO-DATE
+> Task :gradle-plugin:react-native-gradle-plugin:compileKotlin UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-plugin:compileJava NO-SOURCE
+> Task :gradle-plugin:react-native-gradle-plugin:compileJava NO-SOURCE
+> Task :expo-gradle-plugin:expo-autolinking-plugin:pluginDescriptors UP-TO-DATE
+> Task :gradle-plugin:react-native-gradle-plugin:pluginDescriptors UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-plugin:processResources UP-TO-DATE
+> Task :gradle-plugin:react-native-gradle-plugin:processResources UP-TO-DATE
+> Task :gradle-plugin:react-native-gradle-plugin:classes UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-plugin:classes UP-TO-DATE
+> Task :gradle-plugin:react-native-gradle-plugin:jar UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-plugin:jar UP-TO-DATE
+> Task :expo-module-gradle-plugin:compileKotlin UP-TO-DATE
+> Task :expo-module-gradle-plugin:compileJava NO-SOURCE
+> Task :expo-module-gradle-plugin:classes UP-TO-DATE
+> Task :expo-module-gradle-plugin:jar UP-TO-DATE
+
+> Configure project :
+[32m[ExpoRootProject][0m Using the following versions:
+  - buildTools:  [32m36.0.0[0m
+  - minSdk:      [32m26[0m
+  - compileSdk:  [32m36[0m
+  - targetSdk:   [32m36[0m
+  - ndk:         [32m27.1.12297006[0m
+  - kotlin:      [32m2.1.20[0m
+  - ksp:         [32m2.1.20-2.0.1[0m
+
+> Configure project :expo
+
+Using expo modules
+  - [32mexpo-constants[0m (18.0.13)
+  - [32mexpo-modules-core[0m (3.0.29)
+  - [33m[📦][0m [32mexpo-asset[0m (12.0.12)
+  - [33m[📦][0m [32mexpo-file-system[0m (19.0.21)
+  - [33m[📦][0m [32mexpo-font[0m (14.0.11)
+  - [33m[📦][0m [32mexpo-keep-awake[0m (15.0.8)
+  - [33m[📦][0m [32mexpo-linear-gradient[0m (15.0.8)
+  - [33m[📦][0m [32mexpo-linking[0m (8.0.11)
+  - [33m[📦][0m [32mexpo-media-library[0m (18.2.1)
+  - [33m[📦][0m [32mexpo-splash-screen[0m (31.0.13)
+  - [33m[📦][0m [32mexpo-system-ui[0m (6.0.9)
+  - [33m[📦][0m [32mexpo-video[0m (3.0.16)
+  - [33m[📦][0m [32mexpo-web-browser[0m (15.0.10)
+
+
+> Task :expo-modules-core:preBuild UP-TO-DATE
+> Task :react-native-community_netinfo:preBuild UP-TO-DATE
+> Task :expo-modules-core:preDebugBuild UP-TO-DATE
+> Task :react-native-fs:preBuild UP-TO-DATE
+> Task :react-native-community_netinfo:preDebugBuild UP-TO-DATE
+> Task :react-native-fs:preDebugBuild UP-TO-DATE
+> Task :react-native-fs:writeDebugAarMetadata
+> Task :react-native-linear-gradient:preBuild UP-TO-DATE
+> Task :expo-modules-core:writeDebugAarMetadata
+> Task :react-native-community_netinfo:writeDebugAarMetadata
+> Task :react-native-linear-gradient:preDebugBuild UP-TO-DATE
+> Task :app:generateAutolinkingNewArchitectureFiles
+> Task :react-native-linear-gradient:writeDebugAarMetadata
+> Task :app:generateAutolinkingPackageList
+> Task :app:generateCodegenSchemaFromJavaScript SKIPPED
+> Task :app:generateCodegenArtifactsFromSchema SKIPPED
+> Task :app:generateReactNativeEntryPoint
+> Task :app:preBuild
+> Task :app:preDebugBuild
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:generateDebugBuildConfig FROM-CACHE
+> Task :react-native-reanimated:assertMinimalReactNativeVersionTask
+> Task :react-native-reanimated:assertNewArchitectureEnabledTask SKIPPED
+> Task :react-native-reanimated:assertWorkletsVersionTask
+> Task :react-native-async-storage_async-storage:generateCodegenSchemaFromJavaScript
+> Task :react-native-gesture-handler:generateCodegenSchemaFromJavaScript
+> Task :react-native-reanimated:generateCodegenSchemaFromJavaScript
+> Task :react-native-safe-area-context:generateCodegenSchemaFromJavaScript
+> Task :react-native-svg:generateCodegenSchemaFromJavaScript
+> Task :react-native-screens:generateCodegenSchemaFromJavaScript
+> Task :react-native-async-storage_async-storage:generateCodegenArtifactsFromSchema
+> Task :react-native-async-storage_async-storage:preBuild
+> Task :react-native-async-storage_async-storage:preDebugBuild
+> Task :react-native-async-storage_async-storage:writeDebugAarMetadata
+> Task :react-native-vector-icons:preBuild UP-TO-DATE
+> Task :react-native-vector-icons:preDebugBuild UP-TO-DATE
+> Task :react-native-vector-icons:writeDebugAarMetadata
+> Task :react-native-vlc-media-player:preBuild UP-TO-DATE
+> Task :react-native-vlc-media-player:preDebugBuild UP-TO-DATE
+> Task :react-native-vlc-media-player:writeDebugAarMetadata
+> Task :expo-constants:createExpoConfig
+> Task :expo-constants:preBuild
+> Task :expo-constants:preDebugBuild
+> Task :expo-constants:writeDebugAarMetadata
+> Task :react-native-reanimated:generateCodegenArtifactsFromSchema
+> Task :react-native-safe-area-context:generateCodegenArtifactsFromSchema
+> Task :react-native-safe-area-context:preBuild
+> Task :react-native-safe-area-context:preDebugBuild
+> Task :react-native-gesture-handler:generateCodegenArtifactsFromSchema
+> Task :react-native-gesture-handler:preBuild
+> Task :react-native-gesture-handler:preDebugBuild
+> Task :react-native-safe-area-context:writeDebugAarMetadata
+> Task :react-native-gesture-handler:writeDebugAarMetadata
+> Task :expo-constants:generateDebugResValues FROM-CACHE
+> Task :app:generateDebugResValues FROM-CACHE
+> Task :expo-constants:generateDebugResources FROM-CACHE
+> Task :expo-modules-core:generateDebugResValues FROM-CACHE
+> Task :expo-modules-core:generateDebugResources FROM-CACHE
+> Task :expo-constants:packageDebugResources FROM-CACHE
+> Task :react-native-async-storage_async-storage:generateDebugResValues FROM-CACHE
+> Task :expo-modules-core:packageDebugResources FROM-CACHE
+> Task :react-native-async-storage_async-storage:generateDebugResources FROM-CACHE
+> Task :react-native-community_netinfo:generateDebugResValues FROM-CACHE
+> Task :react-native-community_netinfo:generateDebugResources FROM-CACHE
+> Task :react-native-async-storage_async-storage:packageDebugResources FROM-CACHE
+> Task :react-native-fs:generateDebugResValues FROM-CACHE
+> Task :react-native-svg:generateCodegenArtifactsFromSchema
+> Task :react-native-svg:preBuild
+> Task :react-native-svg:preDebugBuild
+> Task :react-native-fs:generateDebugResources FROM-CACHE
+> Task :react-native-community_netinfo:packageDebugResources FROM-CACHE
+> Task :react-native-gesture-handler:generateDebugResValues FROM-CACHE
+> Task :react-native-svg:writeDebugAarMetadata
+> Task :react-native-linear-gradient:generateDebugResValues FROM-CACHE
+> Task :react-native-gesture-handler:generateDebugResources FROM-CACHE
+> Task :react-native-fs:packageDebugResources FROM-CACHE
+> Task :react-native-linear-gradient:generateDebugResources FROM-CACHE
+> Task :react-native-safe-area-context:generateDebugResValues FROM-CACHE
+> Task :react-native-safe-area-context:generateDebugResources FROM-CACHE
+> Task :react-native-gesture-handler:packageDebugResources FROM-CACHE
+> Task :react-native-linear-gradient:packageDebugResources FROM-CACHE
+> Task :react-native-svg:generateDebugResValues FROM-CACHE
+> Task :react-native-vector-icons:generateDebugResValues FROM-CACHE
+> Task :react-native-svg:generateDebugResources FROM-CACHE
+> Task :react-native-vector-icons:generateDebugResources FROM-CACHE
+> Task :react-native-worklets:assertMinimalReactNativeVersionTask
+> Task :react-native-worklets:assertNewArchitectureEnabledTask SKIPPED
+> Task :react-native-safe-area-context:packageDebugResources FROM-CACHE
+> Task :react-native-vlc-media-player:generateDebugResValues FROM-CACHE
+> Task :react-native-vector-icons:packageDebugResources FROM-CACHE
+> Task :react-native-vlc-media-player:generateDebugResources FROM-CACHE
+> Task :app:generateDebugResources FROM-CACHE
+> Task :react-native-vlc-media-player:packageDebugResources FROM-CACHE
+> Task :expo-constants:extractDeepLinksDebug FROM-CACHE
+> Task :expo-constants:processDebugManifest FROM-CACHE
+> Task :expo-modules-core:extractDeepLinksDebug FROM-CACHE
+> Task :expo-modules-core:processDebugManifest FROM-CACHE
+> Task :react-native-reanimated:prepareReanimatedHeadersForPrefabs
+> Task :react-native-reanimated:preBuild
+> Task :react-native-reanimated:preDebugBuild
+> Task :react-native-reanimated:writeDebugAarMetadata
+> Task :react-native-svg:packageDebugResources FROM-CACHE
+> Task :react-native-reanimated:generateDebugResValues FROM-CACHE
+> Task :react-native-community_netinfo:extractDeepLinksDebug FROM-CACHE
+> Task :react-native-reanimated:generateDebugResources FROM-CACHE
+> Task :react-native-community_netinfo:processDebugManifest FROM-CACHE
+> Task :app:packageDebugResources FROM-CACHE
+> Task :react-native-reanimated:packageDebugResources FROM-CACHE
+> Task :react-native-fs:extractDeepLinksDebug FROM-CACHE
+> Task :react-native-async-storage_async-storage:extractDeepLinksDebug FROM-CACHE
+> Task :react-native-gesture-handler:extractDeepLinksDebug FROM-CACHE
+> Task :app:parseDebugLocalResources FROM-CACHE
+> Task :react-native-screens:generateCodegenArtifactsFromSchema
+> Task :app:createDebugCompatibleScreenManifests
+> Task :react-native-screens:preBuild
+> Task :react-native-screens:preDebugBuild
+> Task :react-native-gesture-handler:processDebugManifest FROM-CACHE
+> Task :app:extractDeepLinksDebug FROM-CACHE
+> Task :react-native-async-storage_async-storage:processDebugManifest FROM-CACHE
+> Task :react-native-screens:writeDebugAarMetadata
+> Task :react-native-screens:generateDebugResValues FROM-CACHE
+> Task :react-native-reanimated:extractDeepLinksDebug FROM-CACHE
+> Task :react-native-safe-area-context:extractDeepLinksDebug FROM-CACHE
+> Task :react-native-screens:generateDebugResources FROM-CACHE
+> Task :react-native-fs:processDebugManifest FROM-CACHE
+> Task :react-native-svg:extractDeepLinksDebug FROM-CACHE
+> Task :react-native-reanimated:processDebugManifest FROM-CACHE
+> Task :react-native-safe-area-context:processDebugManifest FROM-CACHE
+> Task :react-native-vlc-media-player:extractDeepLinksDebug FROM-CACHE
+> Task :react-native-vector-icons:extractDeepLinksDebug FROM-CACHE
+> Task :react-native-linear-gradient:extractDeepLinksDebug FROM-CACHE
+> Task :react-native-vlc-media-player:processDebugManifest FROM-CACHE
+> Task :expo-constants:compileDebugLibraryResources FROM-CACHE
+> Task :expo-constants:parseDebugLocalResources FROM-CACHE
+> Task :expo-constants:generateDebugRFile FROM-CACHE
+> Task :react-native-screens:packageDebugResources FROM-CACHE
+> Task :expo-modules-core:compileDebugLibraryResources FROM-CACHE
+> Task :react-native-svg:processDebugManifest FROM-CACHE
+> Task :react-native-screens:extractDeepLinksDebug FROM-CACHE
+> Task :expo-modules-core:parseDebugLocalResources FROM-CACHE
+> Task :react-native-screens:processDebugManifest FROM-CACHE
+> Task :expo-modules-core:generateDebugRFile FROM-CACHE
+> Task :react-native-linear-gradient:processDebugManifest FROM-CACHE
+> Task :react-native-fs:compileDebugLibraryResources FROM-CACHE
+> Task :react-native-gesture-handler:compileDebugLibraryResources FROM-CACHE
+> Task :react-native-async-storage_async-storage:compileDebugLibraryResources FROM-CACHE
+> Task :react-native-fs:parseDebugLocalResources FROM-CACHE
+> Task :react-native-gesture-handler:parseDebugLocalResources FROM-CACHE
+> Task :react-native-async-storage_async-storage:parseDebugLocalResources FROM-CACHE
+> Task :react-native-fs:generateDebugRFile FROM-CACHE
+> Task :react-native-vector-icons:processDebugManifest FROM-CACHE
+> Task :react-native-gesture-handler:generateDebugRFile FROM-CACHE
+> Task :react-native-linear-gradient:compileDebugLibraryResources FROM-CACHE
+> Task :react-native-safe-area-context:compileDebugLibraryResources FROM-CACHE
+> Task :react-native-reanimated:compileDebugLibraryResources FROM-CACHE
+> Task :react-native-linear-gradient:parseDebugLocalResources FROM-CACHE
+> Task :react-native-safe-area-context:parseDebugLocalResources FROM-CACHE
+> Task :react-native-safe-area-context:generateDebugRFile FROM-CACHE
+> Task :react-native-community_netinfo:compileDebugLibraryResources FROM-CACHE
+> Task :react-native-linear-gradient:generateDebugRFile FROM-CACHE
+> Task :react-native-reanimated:parseDebugLocalResources FROM-CACHE
+> Task :react-native-svg:compileDebugLibraryResources FROM-CACHE
+> Task :react-native-svg:parseDebugLocalResources FROM-CACHE
+> Task :react-native-reanimated:generateDebugRFile FROM-CACHE
+> Task :react-native-screens:compileDebugLibraryResources FROM-CACHE
+> Task :react-native-svg:generateDebugRFile FROM-CACHE
+> Task :react-native-community_netinfo:parseDebugLocalResources FROM-CACHE
+> Task :react-native-vlc-media-player:compileDebugLibraryResources FROM-CACHE
+> Task :react-native-community_netinfo:generateDebugRFile FROM-CACHE
+> Task :expo-constants:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :react-native-vlc-media-player:parseDebugLocalResources FROM-CACHE
+> Task :expo-constants:generateDebugBuildConfig FROM-CACHE
+> Task :react-native-vector-icons:compileDebugLibraryResources FROM-CACHE
+> Task :expo-modules-core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :react-native-webview:generateCodegenSchemaFromJavaScript
+> Task :react-native-vlc-media-player:generateDebugRFile FROM-CACHE
+> Task :expo-modules-core:generateDebugBuildConfig FROM-CACHE
+> Task :react-native-vector-icons:parseDebugLocalResources FROM-CACHE
+> Task :expo-constants:javaPreCompileDebug FROM-CACHE
+> Task :react-native-community_netinfo:generateDebugBuildConfig FROM-CACHE
+> Task :react-native-vector-icons:generateDebugRFile FROM-CACHE
+> Task :react-native-community_netinfo:javaPreCompileDebug FROM-CACHE
+> Task :react-native-async-storage_async-storage:generateDebugRFile FROM-CACHE
+> Task :react-native-fs:generateDebugBuildConfig FROM-CACHE
+> Task :react-native-fs:javaPreCompileDebug FROM-CACHE
+> Task :react-native-screens:parseDebugLocalResources FROM-CACHE
+> Task :react-native-screens:generateDebugRFile FROM-CACHE
+> Task :react-native-gesture-handler:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :react-native-gesture-handler:generateDebugBuildConfig FROM-CACHE
+> Task :react-native-reanimated:generateDebugBuildConfig FROM-CACHE
+> Task :react-native-async-storage_async-storage:generateDebugBuildConfig FROM-CACHE
+> Task :expo:generatePackagesList
+> Task :expo:preBuild
+> Task :react-native-async-storage_async-storage:javaPreCompileDebug FROM-CACHE
+> Task :expo:preDebugBuild
+> Task :expo:writeDebugAarMetadata
+> Task :react-native-reanimated:javaPreCompileDebug FROM-CACHE
+> Task :expo:generateDebugResValues FROM-CACHE
+> Task :react-native-svg:generateDebugBuildConfig FROM-CACHE
+> Task :react-native-svg:javaPreCompileDebug FROM-CACHE
+> Task :expo:generateDebugResources FROM-CACHE
+> Task :react-native-async-storage_async-storage:compileDebugJavaWithJavac FROM-CACHE
+> Task :react-native-community_netinfo:compileDebugJavaWithJavac FROM-CACHE
+> Task :react-native-community_netinfo:bundleLibCompileToJarDebug
+> Task :react-native-async-storage_async-storage:bundleLibCompileToJarDebug
+> Task :expo:packageDebugResources FROM-CACHE
+> Task :react-native-fs:compileDebugJavaWithJavac FROM-CACHE
+> Task :react-native-gesture-handler:javaPreCompileDebug FROM-CACHE
+> Task :react-native-linear-gradient:generateDebugBuildConfig FROM-CACHE
+> Task :react-native-safe-area-context:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :react-native-linear-gradient:javaPreCompileDebug FROM-CACHE
+> Task :expo:extractDeepLinksDebug FROM-CACHE
+> Task :react-native-safe-area-context:generateDebugBuildConfig FROM-CACHE
+> Task :expo:processDebugManifest FROM-CACHE
+> Task :react-native-linear-gradient:compileDebugJavaWithJavac FROM-CACHE
+> Task :expo:compileDebugLibraryResources FROM-CACHE
+> Task :expo:parseDebugLocalResources FROM-CACHE
+> Task :react-native-fs:bundleLibCompileToJarDebug
+> Task :react-native-screens:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :react-native-linear-gradient:bundleLibCompileToJarDebug
+> Task :expo:generateDebugRFile FROM-CACHE
+> Task :expo:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :react-native-screens:generateDebugBuildConfig FROM-CACHE
+> Task :react-native-vector-icons:generateDebugBuildConfig FROM-CACHE
+> Task :react-native-vector-icons:javaPreCompileDebug FROM-CACHE
+> Task :expo:generateDebugBuildConfig FROM-CACHE
+> Task :expo:javaPreCompileDebug FROM-CACHE
+> Task :react-native-vector-icons:compileDebugJavaWithJavac FROM-CACHE
+> Task :react-native-vector-icons:bundleLibCompileToJarDebug
+> Task :react-native-safe-area-context:compileDebugKotlin FROM-CACHE
+> Task :react-native-worklets:generateCodegenSchemaFromJavaScript
+> Task :react-native-svg:compileDebugJavaWithJavac FROM-CACHE
+> Task :react-native-vlc-media-player:generateDebugBuildConfig
+> Task :app:javaPreCompileDebug FROM-CACHE
+> Task :react-native-safe-area-context:javaPreCompileDebug FROM-CACHE
+> Task :app:mergeDebugShaders
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :expo:mergeDebugShaders
+> Task :expo:compileDebugShaders NO-SOURCE
+> Task :expo:generateDebugAssets UP-TO-DATE
+> Task :react-native-vlc-media-player:javaPreCompileDebug FROM-CACHE
+> Task :expo:mergeDebugAssets
+> Task :expo-constants:mergeDebugShaders
+> Task :expo-constants:compileDebugShaders NO-SOURCE
+> Task :expo-constants:generateDebugAssets UP-TO-DATE
+> Task :react-native-svg:bundleLibCompileToJarDebug
+> Task :react-native-async-storage_async-storage:mergeDebugShaders
+> Task :react-native-async-storage_async-storage:compileDebugShaders NO-SOURCE
+> Task :react-native-async-storage_async-storage:generateDebugAssets UP-TO-DATE
+> Task :react-native-async-storage_async-storage:mergeDebugAssets
+> Task :expo-constants:mergeDebugAssets
+> Task :react-native-fs:mergeDebugShaders
+> Task :react-native-fs:compileDebugShaders NO-SOURCE
+> Task :react-native-fs:generateDebugAssets UP-TO-DATE
+> Task :react-native-community_netinfo:mergeDebugShaders
+> Task :react-native-community_netinfo:compileDebugShaders NO-SOURCE
+> Task :react-native-community_netinfo:generateDebugAssets UP-TO-DATE
+> Task :react-native-community_netinfo:mergeDebugAssets
+> Task :react-native-fs:mergeDebugAssets
+> Task :react-native-linear-gradient:mergeDebugShaders
+> Task :react-native-linear-gradient:compileDebugShaders NO-SOURCE
+> Task :react-native-linear-gradient:generateDebugAssets UP-TO-DATE
+> Task :react-native-gesture-handler:mergeDebugShaders
+> Task :react-native-gesture-handler:compileDebugShaders NO-SOURCE
+> Task :react-native-gesture-handler:generateDebugAssets UP-TO-DATE
+> Task :react-native-linear-gradient:mergeDebugAssets
+> Task :react-native-gesture-handler:mergeDebugAssets
+> Task :react-native-reanimated:mergeDebugShaders
+> Task :react-native-reanimated:compileDebugShaders NO-SOURCE
+> Task :react-native-reanimated:generateDebugAssets UP-TO-DATE
+> Task :react-native-svg:mergeDebugShaders
+> Task :react-native-svg:compileDebugShaders NO-SOURCE
+> Task :react-native-svg:generateDebugAssets UP-TO-DATE
+> Task :react-native-reanimated:mergeDebugAssets
+> Task :react-native-svg:mergeDebugAssets
+> Task :react-native-vector-icons:mergeDebugShaders
+> Task :react-native-vector-icons:compileDebugShaders NO-SOURCE
+> Task :react-native-vector-icons:generateDebugAssets UP-TO-DATE
+> Task :react-native-vector-icons:mergeDebugAssets
+> Task :react-native-community_netinfo:bundleLibRuntimeToJarDebug
+> Task :react-native-async-storage_async-storage:bundleLibRuntimeToJarDebug
+> Task :react-native-webview:generateCodegenArtifactsFromSchema
+> Task :react-native-webview:preBuild
+> Task :react-native-webview:preDebugBuild
+> Task :react-native-webview:writeDebugAarMetadata
+> Task :react-native-webview:generateDebugResValues FROM-CACHE
+> Task :react-native-webview:generateDebugResources FROM-CACHE
+> Task :react-native-webview:packageDebugResources FROM-CACHE
+> Task :react-native-webview:extractDeepLinksDebug FROM-CACHE
+> Task :react-native-webview:processDebugManifest FROM-CACHE
+> Task :react-native-webview:compileDebugLibraryResources FROM-CACHE
+> Task :react-native-webview:parseDebugLocalResources FROM-CACHE
+> Task :react-native-webview:generateDebugRFile FROM-CACHE
+> Task :react-native-webview:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :react-native-worklets:generateCodegenArtifactsFromSchema
+> Task :react-native-worklets:prepareWorkletsHeadersForPrefabs
+> Task :react-native-worklets:preBuild
+> Task :react-native-worklets:preDebugBuild
+> Task :react-native-worklets:writeDebugAarMetadata
+> Task :react-native-screens:compileDebugKotlin FROM-CACHE
+> Task :app:checkDebugAarMetadata
+> Task :react-native-webview:generateDebugBuildConfig
+> Task :expo-modules-core:compileDebugKotlin FROM-CACHE
+> Task :expo-modules-core:javaPreCompileDebug FROM-CACHE
+> Task :react-native-screens:javaPreCompileDebug FROM-CACHE
+> Task :react-native-safe-area-context:compileDebugJavaWithJavac
+> Task :react-native-worklets:generateDebugResValues FROM-CACHE
+> Task :react-native-worklets:generateDebugResources FROM-CACHE
+> Task :react-native-linear-gradient:bundleLibRuntimeToJarDebug
+> Task :react-native-fs:bundleLibRuntimeToJarDebug
+> Task :react-native-worklets:packageDebugResources FROM-CACHE
+> Task :react-native-safe-area-context:mergeDebugShaders
+> Task :react-native-worklets:extractDeepLinksDebug FROM-CACHE
+> Task :react-native-worklets:processDebugManifest UP-TO-DATE
+> Task :react-native-safe-area-context:bundleLibCompileToJarDebug
+> Task :react-native-worklets:compileDebugLibraryResources FROM-CACHE
+> Task :react-native-worklets:parseDebugLocalResources FROM-CACHE
+> Task :react-native-safe-area-context:compileDebugShaders NO-SOURCE
+> Task :react-native-safe-area-context:generateDebugAssets UP-TO-DATE
+> Task :react-native-safe-area-context:mergeDebugAssets
+> Task :app:mapDebugSourceSetPaths
+> Task :react-native-worklets:generateDebugRFile FROM-CACHE
+> Task :react-native-worklets:generateDebugBuildConfig FROM-CACHE
+> Task :react-native-worklets:javaPreCompileDebug FROM-CACHE
+> Task :react-native-safe-area-context:bundleLibRuntimeToJarDebug
+> Task :react-native-worklets:compileDebugJavaWithJavac FROM-CACHE
+> Task :react-native-worklets:bundleLibCompileToJarDebug
+> Task :app:mergeDebugResources FROM-CACHE
+
+> Task :react-native-vlc-media-player:compileDebugJavaWithJavac
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :react-native-webview:javaPreCompileDebug FROM-CACHE
+> Task :react-native-webview:mergeDebugShaders
+> Task :react-native-webview:compileDebugShaders NO-SOURCE
+> Task :react-native-webview:generateDebugAssets UP-TO-DATE
+> Task :react-native-webview:mergeDebugAssets
+> Task :react-native-vlc-media-player:mergeDebugShaders
+> Task :react-native-vlc-media-player:compileDebugShaders NO-SOURCE
+> Task :react-native-vlc-media-player:generateDebugAssets UP-TO-DATE
+> Task :react-native-worklets:mergeDebugShaders
+> Task :react-native-worklets:compileDebugShaders NO-SOURCE
+> Task :react-native-worklets:generateDebugAssets UP-TO-DATE
+> Task :react-native-vlc-media-player:mergeDebugAssets
+> Task :app:processDebugMainManifest FAILED
+> Task :react-native-worklets:mergeDebugAssets
+> Task :react-native-vlc-media-player:bundleLibCompileToJarDebug
+> Task :react-native-vlc-media-player:bundleLibRuntimeToJarDebug
+> Task :react-native-worklets:bundleLibRuntimeToJarDebug
+> Task :react-native-svg:bundleLibRuntimeToJarDebug
+> Task :react-native-screens:compileDebugJavaWithJavac
+
+> Task :expo-modules-core:compileDebugJavaWithJavac
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :react-native-reanimated:compileDebugJavaWithJavac
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+> Task :react-native-webview:compileDebugKotlin
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt:22:8 'object MapBuilder : Any' is deprecated. Use Kotlin's built-in collections extensions.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt:82:18 'var allowFileAccessFromFileURLs: Boolean' is deprecated. Deprecated in Java.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt:83:18 'var allowUniversalAccessFromFileURLs: Boolean' is deprecated. Deprecated in Java.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt:125:21 'fun allowScanningByMediaScanner(): Unit' is deprecated. Deprecated in Java.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt:162:36 'var systemUiVisibility: Int' is deprecated. Deprecated in Java.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt:301:14 'object MapBuilder : Any' is deprecated. Use Kotlin's built-in collections extensions.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt:351:34 Condition is always 'true'.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt:370:38 'var allowUniversalAccessFromFileURLs: Boolean' is deprecated. Deprecated in Java.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt:431:51 Unchecked cast of 'Any?' to 'HashMap<String, String>'.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt:487:23 'var savePassword: Boolean' is deprecated. Deprecated in Java.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt:488:23 'var saveFormData: Boolean' is deprecated. Deprecated in Java.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt:558:23 'var allowFileAccessFromFileURLs: Boolean' is deprecated. Deprecated in Java.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt:603:52 'static field FORCE_DARK_ON: Int' is deprecated. Deprecated in Java.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt:603:89 'static field FORCE_DARK_OFF: Int' is deprecated. Deprecated in Java.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt:604:35 'static fun setForceDark(p0: @NonNull() WebSettings, p1: Int): Unit' is deprecated. Deprecated in Java.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt:613:35 'static fun setForceDarkStrategy(p0: @NonNull() WebSettings, p1: Int): Unit' is deprecated. Deprecated in Java.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt:615:39 'static field DARK_STRATEGY_PREFER_WEB_THEME_OVER_USER_AGENT_DARKENING: Int' is deprecated. Deprecated in Java.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt:659:65 Unchecked cast of 'ArrayList<Any?>' to 'List<Map<String, String>>'.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt:680:23 'var saveFormData: Boolean' is deprecated. Deprecated in Java.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopCustomMenuSelectionEvent.kt:5:8 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopCustomMenuSelectionEvent.kt:11:3 'constructor<T : Event<T>>(viewTag: Int): Event<T>' is deprecated. Use constructor with explicit surfaceId instead.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopCustomMenuSelectionEvent.kt:22:16 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopCustomMenuSelectionEvent.kt:22:42 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopCustomMenuSelectionEvent.kt:23:21 'fun receiveEvent(targetTag: Int, eventName: String, params: WritableMap?): Unit' is deprecated. Use [RCTModernEventEmitter.receiveEvent] instead.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopHttpErrorEvent.kt:5:8 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopHttpErrorEvent.kt:11:3 'constructor<T : Event<T>>(viewTag: Int): Event<T>' is deprecated. Use constructor with explicit surfaceId instead.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopHttpErrorEvent.kt:22:16 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopHttpErrorEvent.kt:22:42 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopHttpErrorEvent.kt:23:21 'fun receiveEvent(targetTag: Int, eventName: String, params: WritableMap?): Unit' is deprecated. Use [RCTModernEventEmitter.receiveEvent] instead.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingErrorEvent.kt:5:8 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingErrorEvent.kt:11:3 'constructor<T : Event<T>>(viewTag: Int): Event<T>' is deprecated. Use constructor with explicit surfaceId instead.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingErrorEvent.kt:22:16 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingErrorEvent.kt:22:42 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingErrorEvent.kt:23:21 'fun receiveEvent(targetTag: Int, eventName: String, params: WritableMap?): Unit' is deprecated. Use [RCTModernEventEmitter.receiveEvent] instead.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingFinishEvent.kt:5:8 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingFinishEvent.kt:11:3 'constructor<T : Event<T>>(viewTag: Int): Event<T>' is deprecated. Use constructor with explicit surfaceId instead.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingFinishEvent.kt:22:16 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingFinishEvent.kt:22:42 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingFinishEvent.kt:23:21 'fun receiveEvent(targetTag: Int, eventName: String, params: WritableMap?): Unit' is deprecated. Use [RCTModernEventEmitter.receiveEvent] instead.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingProgressEvent.kt:5:8 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingProgressEvent.kt:11:3 'constructor<T : Event<T>>(viewTag: Int): Event<T>' is deprecated. Use constructor with explicit surfaceId instead.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingProgressEvent.kt:22:16 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingProgressEvent.kt:22:42 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingProgressEvent.kt:23:21 'fun receiveEvent(targetTag: Int, eventName: String, params: WritableMap?): Unit' is deprecated. Use [RCTModernEventEmitter.receiveEvent] instead.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingStartEvent.kt:5:8 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingStartEvent.kt:11:3 'constructor<T : Event<T>>(viewTag: Int): Event<T>' is deprecated. Use constructor with explicit surfaceId instead.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingStartEvent.kt:22:16 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingStartEvent.kt:22:42 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingStartEvent.kt:23:21 'fun receiveEvent(targetTag: Int, eventName: String, params: WritableMap?): Unit' is deprecated. Use [RCTModernEventEmitter.receiveEvent] instead.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopMessageEvent.kt:5:8 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopMessageEvent.kt:10:75 'constructor<T : Event<T>>(viewTag: Int): Event<T>' is deprecated. Use constructor with explicit surfaceId instead.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopMessageEvent.kt:21:16 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopMessageEvent.kt:21:42 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopMessageEvent.kt:22:21 'fun receiveEvent(targetTag: Int, eventName: String, params: WritableMap?): Unit' is deprecated. Use [RCTModernEventEmitter.receiveEvent] instead.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopNewWindowEvent.kt:5:8 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopNewWindowEvent.kt:11:3 'constructor<T : Event<T>>(viewTag: Int): Event<T>' is deprecated. Use constructor with explicit surfaceId instead.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopNewWindowEvent.kt:22:16 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopNewWindowEvent.kt:22:42 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopNewWindowEvent.kt:23:21 'fun receiveEvent(targetTag: Int, eventName: String, params: WritableMap?): Unit' is deprecated. Use [RCTModernEventEmitter.receiveEvent] instead.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopRenderProcessGoneEvent.kt:5:8 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopRenderProcessGoneEvent.kt:12:3 'constructor<T : Event<T>>(viewTag: Int): Event<T>' is deprecated. Use constructor with explicit surfaceId instead.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopRenderProcessGoneEvent.kt:23:16 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopRenderProcessGoneEvent.kt:23:42 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopRenderProcessGoneEvent.kt:24:21 'fun receiveEvent(targetTag: Int, eventName: String, params: WritableMap?): Unit' is deprecated. Use [RCTModernEventEmitter.receiveEvent] instead.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopShouldStartLoadWithRequestEvent.kt:5:8 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopShouldStartLoadWithRequestEvent.kt:10:89 'constructor<T : Event<T>>(viewTag: Int): Event<T>' is deprecated. Use constructor with explicit surfaceId instead.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopShouldStartLoadWithRequestEvent.kt:27:16 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopShouldStartLoadWithRequestEvent.kt:27:42 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopShouldStartLoadWithRequestEvent.kt:28:21 'fun receiveEvent(targetTag: Int, eventName: String, params: WritableMap?): Unit' is deprecated. Use [RCTModernEventEmitter.receiveEvent] instead.
+
+[Incubating] Problems report is available at: file:///Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/android/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:processDebugMainManifest'.
+> com.android.manifmerger.ManifestMerger2$MergeFailureException: java.io.FileNotFoundException: /Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml (No such file or directory)
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 7s
+300 actionable tasks: 100 executed, 175 from cache, 25 up-to-date
+Error: /Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/android/gradlew app:assembleDebug -x lint -x test --configure-on-demand --build-cache -PreactNativeDevServerPort=8081 -PreactNativeArchitectures=arm64-v8a,armeabi-v7a exited with non-zero code: 1
+Error: /Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/android/gradlew app:assembleDebug -x lint -x test --configure-on-demand --build-cache -PreactNativeDevServerPort=8081 -PreactNativeArchitectures=arm64-v8a,armeabi-v7a exited with non-zero code: 1
+    at ChildProcess.completionListener (/Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/@expo/spawn-async/src/spawnAsync.ts:67:13)
+    at Object.onceWrapper (node:events:622:26)
+    at ChildProcess.emit (node:events:507:28)
+    at maybeClose (node:internal/child_process:1101:16)
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:305:5)
+    ...
+    at spawnAsync (/Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/@expo/spawn-async/src/spawnAsync.ts:28:21)
+    at spawnGradleAsync (/Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/expo/node_modules/@expo/cli/src/start/platforms/android/gradle.ts:134:28)
+    at assembleAsync (/Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/expo/node_modules/@expo/cli/src/start/platforms/android/gradle.ts:83:16)
+    at runAndroidAsync (/Users/shreyastarar/Documents/CCTV_DEMO2026/CCTV-Streaming-App/node_modules/expo/node_modules/@expo/cli/src/run/android/runAndroidAsync.ts:62:24)

@@ -1,4 +1,4 @@
-import { clearAllSnapshots, deleteSnapshot, getSnapshots, deleteSnapshots } from '@/lib/snapshot';
+import { clearAllSnapshots, deleteSnapshot, getSnapshots, deleteSnapshots, seedEuropeSnapshots } from '@/lib/snapshot';
 import { Snapshot } from '@/types/camera';
 import { useFocusEffect, useRouter } from 'expo-router';
 import React, { useCallback, useState } from 'react';
@@ -29,6 +29,7 @@ export default function SnapshotGalleryScreen() {
   };
 
   const loadSnapshots = async () => {
+    await seedEuropeSnapshots();
     const data = await getSnapshots();
     setSnapshots(data);
   };

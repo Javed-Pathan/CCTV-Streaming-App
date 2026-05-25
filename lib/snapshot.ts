@@ -1,10 +1,111 @@
 import { Snapshot } from '@/types/camera';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Asset } from 'expo-asset';
 import * as FileSystem from 'expo-file-system/legacy';
 import * as MediaLibrary from 'expo-media-library';
 import { Platform } from 'react-native';
 
 const SNAPSHOTS_STORAGE_KEY = 'cctv_snapshots';
+const EUROPE_SEEDED_KEY = 'europe_snapshots_seeded';
+
+// Bundled Europe snapshot data
+const EUROPE_SNAPSHOTS_DATA = [
+    {
+        id: 'europe-paris-001',
+        cameraId: 'eu-cam-08',
+        cameraName: 'Eiffel Tower Cam',
+        location: 'Paris, France',
+        timestamp: '14/10/2023, 11:48:12 PM',
+        date: '2023-10-14T23:48:12.000Z',
+        asset: require('@/assets/images/europe/paris.png'),
+        fileName: 'europe_paris.png',
+    },
+    {
+        id: 'europe-london-002',
+        cameraId: 'eu-cam-07',
+        cameraName: 'Tower Bridge Cam',
+        location: 'London, United Kingdom',
+        timestamp: '24/10/2023, 7:42:08 PM',
+        date: '2023-10-24T19:42:08.000Z',
+        asset: require('@/assets/images/europe/london.png'),
+        fileName: 'europe_london.png',
+    },
+    {
+        id: 'europe-rome-003',
+        cameraId: 'eu-cam-03',
+        cameraName: 'Colosseum West Cam',
+        location: 'Rome, Italy',
+        timestamp: '27/10/2024, 6:42:15 PM',
+        date: '2024-10-27T18:42:15.000Z',
+        asset: require('@/assets/images/europe/rome.png'),
+        fileName: 'europe_rome.png',
+    },
+    {
+        id: 'europe-berlin-004',
+        cameraId: 'eu-cam-01',
+        cameraName: 'Brandenburg Gate Cam',
+        location: 'Berlin, Germany',
+        timestamp: '27/10/2023, 7:42:08 PM',
+        date: '2023-10-27T19:42:08.000Z',
+        asset: require('@/assets/images/europe/berlin.png'),
+        fileName: 'europe_berlin.png',
+    },
+];
+
+/**
+ * Seeds the snapshot gallery with 4 pre-bundled European location images.
+ * Only runs once (tracked via AsyncStorage flag).
+ */
+export async function seedEuropeSnapshots(): Promise<void> {
+    try {
+        const alreadySeeded = await AsyncStorage.getItem(EUROPE_SEEDED_KEY);
+        if (alreadySeeded === 'true') return;
+
+        await ensureDirExists();
+        const snapshotDir = getSnapshotDir();
+
+        const existingSnapshots = await getSnapshots();
+        const newSnapshots: Snapshot[] = [];
+
+        for (const item of EUROPE_SNAPSHOTS_DATA) {
+            // Skip if already exists
+            if (existingSnapshots.some(s => s.id === item.id)) continue;
+
+            // Download/copy asset to document directory
+            const [asset] = await Asset.loadAsync(item.asset);
+            const destUri = `${snapshotDir}/${item.fileName}`;
+
+            if (asset.localUri) {
+                await FileSystem.copyAsync({
+                    from: asset.localUri,
+                    to: destUri,
+                });
+            } else if (asset.uri) {
+                await FileSystem.downloadAsync(asset.uri, destUri);
+            }
+
+            newSnapshots.push({
+                id: item.id,
+                cameraId: item.cameraId,
+                cameraName: item.cameraName,
+                location: item.location,
+                timestamp: item.timestamp,
+                date: item.date,
+                imageUri: destUri,
+            });
+        }
+
+        if (newSnapshots.length > 0) {
+            const allSnapshots = [...newSnapshots, ...existingSnapshots];
+            await AsyncStorage.setItem(SNAPSHOTS_STORAGE_KEY, JSON.stringify(allSnapshots));
+        }
+
+        await AsyncStorage.setItem(EUROPE_SEEDED_KEY, 'true');
+        console.log('[Snapshot] Europe snapshots seeded successfully.');
+    } catch (error) {
+        console.error('[Snapshot] Error seeding Europe snapshots:', error);
+    }
+}
 
 // Ensure snapshot directory exists using stable API
 const getSnapshotDir = () => {

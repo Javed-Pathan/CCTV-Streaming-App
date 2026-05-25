@@ -81,7 +81,7 @@ export default function HomeScreen() {
       <View className="px-6 py-4 border-b border-border">
         <View className="flex-row items-center justify-between mb-4">
           <View>
-            <Text className="text-2xl font-bold text-foreground">My Cameras</Text>
+            <Text className="text-2xl font-bold text-foreground">Surveillance Cameras</Text>
             <Text className="text-sm text-muted-foreground mt-1">
               {cameras.length} camera{cameras.length !== 1 ? 's' : ''} configured
             </Text>
@@ -106,14 +106,6 @@ export default function HomeScreen() {
           />
         </View>
 
-        {/* Test Stream Button */}
-        <TouchableOpacity
-          onPress={() => router.push('/test-stream')}
-          className="bg-blue-500 rounded-xl p-4 mt-3 flex-row items-center justify-center gap-2"
-        >
-          <Video size={20} color="white" />
-          <Text className="text-white font-bold text-base">Test Camera Stream</Text>
-        </TouchableOpacity>
       </View>
 
       <ScrollView contentContainerStyle={{ paddingBottom: 100 }}>
